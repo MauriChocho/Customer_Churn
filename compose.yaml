@@ -1,0 +1,8 @@
+# TODO (Entrega 2): completar el levantamiento del servicio con Docker Compose.
+services:
+  churn-api:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env

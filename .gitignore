@@ -1,0 +1,30 @@
+# Entornos y dependencias
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Variables de entorno y secretos
+.env
+*.env
+
+# Datos versionados por DVC (se descargan con "dvc pull", no van a Git)
+/data/raw/*
+/data/production/*
+/data/scoring/*
+!/data/raw/.gitkeep
+!/data/production/.gitkeep
+!/data/scoring/.gitkeep
+
+# Artefactos de MLflow y modelos entrenados
+mlruns/
+mlartifacts/
+/models/*
+!/models/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema operativo / editores
+.DS_Store
+.vscode/
