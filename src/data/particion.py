@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from src.data.carga_datos import cargar_datos_historicos, COLUMNA_ID, COLUMNA_TARGET
 
 SEMILLA_ALEATORIA = 42
-PROPORCION_TEST = 0.30
+PROPORCION_TEST = 0.20
 
 df = cargar_datos_historicos()
 

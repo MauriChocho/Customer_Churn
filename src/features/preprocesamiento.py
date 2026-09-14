@@ -29,7 +29,8 @@ preprocesador = ColumnTransformer(
     transformers=[
         ("numericas", pipeline_numerico, COLUMNAS_NUMERICAS),
         ("categoricas", pipeline_categorico, COLUMNAS_CATEGORICAS),
-    ]
+    ],
+    verbose_feature_names_out=False,
 )
 
 if __name__ == "__main__":
