@@ -28,3 +28,4 @@ mlartifacts/
 # Sistema operativo / editores
 .DS_Store
 .vscode/
+/data
