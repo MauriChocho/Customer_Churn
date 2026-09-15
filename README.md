@@ -54,7 +54,7 @@ ISTEA_Proyecto_Churn_Datos/
 ├── Dockerfile
 ├── compose.yaml
 ├── requirements.txt
-├── .gitignore
+├── .gitignore 
 ├── .dockerignore
 └── README.md
 ```
@@ -67,7 +67,26 @@ source .venv/bin/activate  # En Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 5. Estado actual
+## 5. Configuración de acceso a los datos (DVC + DagsHub)
+
+Los datos del proyecto están versionados con DVC y alojados en DagsHub, no en este repositorio.
+
+Para poder descargarlos, cada persona debe configurar su propio acceso:
+
+1. Crear una cuenta en DagsHub (si no la tenés).
+2. Generar un token personal desde Settings → Tokens.
+3. Configurar la autenticación local (reemplazando por tus propios datos):
+
+   dvc remote modify origin --local auth basic
+   dvc remote modify origin --local user <tu_usuario_dagshub>
+   dvc remote modify origin --local password <tu_token>
+
+4. Descargar los datos:
+
+   dvc pull
+
+
+## 6. Estado actual
 
 Proyecto en etapa de Entrega 1 (EDA, pipeline de preprocesamiento, comparación de modelos,
 versionado de datos con DVC y registro de experimentos con MLflow). Las secciones de
